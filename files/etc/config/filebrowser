@@ -1,0 +1,7 @@
+
+config filebrowser 'config'
+	option disable_exec '1'
+	option listen_port '6001'
+	option root_path '/mnt/mmcblk0p7'
+	option enabled '1'
+

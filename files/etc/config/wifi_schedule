@@ -1,0 +1,22 @@
+
+config global
+	option logging '0'
+	option recheck_interval '10'
+	option modules_retries '10'
+	option enabled '1'
+	option unload_modules '0'
+
+config entry 'Businesshours'
+	option daysofweek 'Monday Tuesday Wednesday Thursday Friday'
+	option enabled '1'
+	option starttime '09:00'
+	option forcewifidown '1'
+	option stoptime '20:00'
+
+config entry 'Weekend'
+	option enabled '0'
+	option daysofweek 'Saturday Sunday'
+	option starttime '00:00'
+	option stoptime '00:00'
+	option forcewifidown '1'
+

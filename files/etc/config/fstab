@@ -1,0 +1,24 @@
+
+config global
+	option anon_swap '0'
+	option auto_swap '1'
+	option auto_mount '1'
+	option delay_root '5'
+	option check_fs '0'
+	option anon_mount '1'
+
+config mount
+	option target '/overlay'
+	option uuid '69dabc42-cf4c-4638-87e4-a3d8c183cae4'
+	option enabled '0'
+
+config mount
+	option target '/rom'
+	option uuid '504c85a4-d44cb34f-3d424583-0ac85672'
+	option enabled '0'
+
+config mount
+	option target '/mnt/mmcblk0p7'
+	option uuid 'faa24ff9-8af7-49d1-a520-6672a86265d1'
+	option enabled '0'
+
