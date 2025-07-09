@@ -22,3 +22,20 @@ config imm_init
 	option lang '1'
 	option system_chn '1'
 
+config led
+	option name 'CHINA_TELECOM'
+	option sysfs 'xr30:red'
+	option trigger 'netdev'
+	option dev 'lan2'
+	list mode 'link'
+	list mode 'tx'
+	list mode 'rx'
+
+config led
+	option name 'SDYX'
+	option sysfs 'xr30:red'
+	option trigger 'netdev'
+	option dev 'lan3'
+	list mode 'tx'
+	list mode 'rx'
+
