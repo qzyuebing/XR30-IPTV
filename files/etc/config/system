@@ -24,12 +24,12 @@ config imm_init
 
 config led
 	option name 'CHINA_TELECOM'
-	option sysfs 'xr30:red'
 	option trigger 'netdev'
 	option dev 'lan2'
 	list mode 'link'
 	list mode 'tx'
 	list mode 'rx'
+	option sysfs 'xr30:white'
 
 config led
 	option name 'SDYX'
@@ -38,4 +38,5 @@ config led
 	option dev 'lan3'
 	list mode 'tx'
 	list mode 'rx'
+
 
