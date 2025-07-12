@@ -1,5 +1,5 @@
-00 09 * * Mon,Tue,Wed,Thu,Fri /usr/bin/wifi_schedule.sh start
-00 20 * * Mon,Tue,Wed,Thu,Fri /usr/bin/wifi_schedule.sh forcestop
+00 06 * * Mon,Tue,Wed,Thu,Fri /usr/bin/wifi_schedule.sh start
+00 22 * * Mon,Tue,Wed,Thu,Fri /usr/bin/wifi_schedule.sh forcestop
 00 5 * * * sleep 5 && touch /etc/banner && reboot
 #01 23 * * * /usr/sbin/DMRIDUpdate.sh
 #05 23 * * * /usr/sbin/BMMasterUpdate.sh
