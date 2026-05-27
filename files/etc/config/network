@@ -19,7 +19,10 @@ config interface 'lan'
 
 config interface 'wan'
 	option device 'wan'
-	option proto 'dhcp'
+	option proto 'static'
+	option ipaddr '192.168.2.2'
+	option netmask '255.255.255.0'
+	option gateway '192.168.2.1'
 
 config interface 'wan6'
 	option device 'wan'
