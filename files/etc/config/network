@@ -28,7 +28,7 @@ config interface 'wan6'
 config device
 	option name 'wan'
 	option mtu '1500'
-	option macaddr 'D4:EE:07:69:50:23'
+	option macaddr '8C:1A:50:DC:0A:99'
 
 config interface 'CHINA_TELECOM'
 	option proto 'dhcp'
