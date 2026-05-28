@@ -199,7 +199,16 @@ config redirect
 	option target 'DNAT'
 	option name '自用端口'
 	option src 'wan'
-	option src_dport '8000-8030'
 	option dest_ip '192.168.88.1'
 	option dest_port '8000-8030'
+	option src_dport '8001-8030'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option name 'XR30 WEB页面'
+	option src 'wan'
+	option src_dport '8000'
+	option dest_ip '192.168.88.1'
+	option dest_port '80'
 
