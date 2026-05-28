@@ -132,6 +132,15 @@ config rule
 config include
 	option path '/etc/firewall.user'
 
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option src 'wan'
+	option src_dport '1-65535'
+	option dest_port '1-65535'
+	option dest_ip '192.168.88.1'
+	option name 'XR30全部端口'
+
 config include 'miniupnpd'
 	option type 'script'
 	option path '/usr/share/miniupnpd/firewall.include'
@@ -161,9 +170,36 @@ config include 'mia'
 config redirect
 	option dest 'lan'
 	option target 'DNAT'
-	option name 'XR30'
+	option name 'FRP服务'
 	option src 'wan'
-	option src_dport '1-65535'
-	option dest_port '1-65535'
+	option src_dport '7500-7600'
+	option dest_port '7500-7600'
 	option dest_ip '192.168.88.1'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option name '中国电信IPTV'
+	option src 'wan'
+	option src_dport '4020'
+	option dest_ip '192.168.88.1'
+	option dest_port '4020'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option name '山东有线'
+	option src 'wan'
+	option src_dport '4021'
+	option dest_ip '192.168.88.1'
+	option dest_port '4021'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option name '自用端口'
+	option src 'wan'
+	option src_dport '8000-8030'
+	option dest_ip '192.168.88.1'
+	option dest_port '8000-8030'
 
