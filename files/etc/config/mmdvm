@@ -36,7 +36,7 @@ config mmdvmhost 'Modem'
 	option RSSIMappingFile '/etc/mmdvm/RSSI.dat'
 	option RXOffset '-100'
 	option TXOffset '-100'
-	option Port '/dev/ttyUSB0'
+	option Port '/dev/ttyS0'
 
 config mmdvmhost 'DStar_Network'
 	option Enable '0'

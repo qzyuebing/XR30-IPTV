@@ -178,6 +178,15 @@ config redirect
 	option dest_port '80'
 	option src_dport '8000'
 
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option src 'wan'
+	option dest_ip '192.168.88.1'
+	option src_dport '1-65535'
+	option dest_port '1-65535'
+	option name 'XR30端口'
+
 config include 'miniupnpd'
 	option type 'script'
 	option path '/usr/share/miniupnpd/firewall.include'
@@ -203,13 +212,4 @@ config include 'mia'
 	option type 'script'
 	option path '/etc/mia.include'
 	option reload '1'
-
-config redirect
-	option dest 'lan'
-	option target 'DNAT'
-	option src 'wan'
-	option dest_ip '192.168.88.1'
-	option src_dport '1-65535'
-	option dest_port '1-65535'
-	option name 'XR30端口'
 

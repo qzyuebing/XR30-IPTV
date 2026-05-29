@@ -57,5 +57,5 @@ config user
 	option writemkdir '1'
 	option upload '1'
 	option others '1'
-	option home '/mnt/mmcblk0p7'
+	option home '/mnt'
 
