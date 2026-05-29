@@ -5,6 +5,7 @@ config defaults
 	option fullcone '0'
 	option synflood_protect '1'
 	option forward 'ACCEPT'
+	option drop_invalid '1'
 
 config zone
 	option name 'lan'
@@ -135,41 +136,6 @@ config include
 config redirect
 	option dest 'lan'
 	option target 'DNAT'
-	option src 'wan'
-	option src_dport '1-65535'
-	option dest_port '1-65535'
-	option dest_ip '192.168.88.1'
-	option name 'XR30全部端口'
-
-config include 'miniupnpd'
-	option type 'script'
-	option path '/usr/share/miniupnpd/firewall.include'
-	option family 'any'
-	option reload '1'
-
-config include 'luci_app_pptp_server'
-	option type 'script'
-	option path '/var/etc/pptpd.include'
-	option reload '1'
-
-config include 'passwall'
-	option type 'script'
-	option path '/var/etc/passwall.include'
-	option reload '1'
-
-config include 'passwall_server'
-	option type 'script'
-	option path '/var/etc/passwall_server.include'
-	option reload '1'
-
-config include 'mia'
-	option type 'script'
-	option path '/etc/mia.include'
-	option reload '1'
-
-config redirect
-	option dest 'lan'
-	option target 'DNAT'
 	option name 'FRP服务'
 	option src 'wan'
 	option src_dport '7500-7600'
@@ -200,15 +166,50 @@ config redirect
 	option name '自用端口'
 	option src 'wan'
 	option dest_ip '192.168.88.1'
-	option dest_port '8000-8030'
 	option src_dport '8001-8030'
+	option dest_port '8001-8030'
 
 config redirect
 	option dest 'lan'
 	option target 'DNAT'
 	option name 'XR30 WEB页面'
 	option src 'wan'
-	option src_dport '8000'
 	option dest_ip '192.168.88.1'
 	option dest_port '80'
+	option src_dport '8000'
+
+config include 'miniupnpd'
+	option type 'script'
+	option path '/usr/share/miniupnpd/firewall.include'
+	option family 'any'
+	option reload '1'
+
+config include 'luci_app_pptp_server'
+	option type 'script'
+	option path '/var/etc/pptpd.include'
+	option reload '1'
+
+config include 'passwall'
+	option type 'script'
+	option path '/var/etc/passwall.include'
+	option reload '1'
+
+config include 'passwall_server'
+	option type 'script'
+	option path '/var/etc/passwall_server.include'
+	option reload '1'
+
+config include 'mia'
+	option type 'script'
+	option path '/etc/mia.include'
+	option reload '1'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option src 'wan'
+	option dest_ip '192.168.88.1'
+	option src_dport '1-65535'
+	option dest_port '1-65535'
+	option name 'XR30端口'
 
