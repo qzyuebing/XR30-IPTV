@@ -8,7 +8,7 @@ config global
 	option anon_mount '1'
 
 config mount
-	option target '/mnt/mmcblk0p7'
-	option uuid 'faa24ff9-8af7-49d1-a520-6672a86265d1'
-	option enabled '0'
+	option enabled '1'
+	option uuid 'e0311b22-5945-403c-b8f4-7a6992d72e16'
+	option target '/mnt/sda1'
 
