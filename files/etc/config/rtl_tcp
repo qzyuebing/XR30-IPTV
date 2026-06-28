@@ -1,0 +1,12 @@
+config rtl_tcp main
+	option disabled '0'
+	option respawn '1'
+	option device_index '0'
+	option address '0.0.0.0'
+	option port '1234'
+	option frequency '1080000000'
+	option gain '33'
+	option samplerate '2000000'
+	option buffers '8'
+	option num_linked_lists '8'
+	option ppm_error '0'
