@@ -171,7 +171,6 @@ config redirect
 	option dest_ip '192.168.88.1'
 	option src_dport '8001-8030'
 	option dest_port '8001-8030'
-	option enabled '0'
 
 config redirect
 	option dest 'lan'
@@ -190,6 +189,34 @@ config redirect
 	option name 'XR30全部端口'
 	option src_dport '5660-65535'
 	option dest_port '5660-65535'
+	option enabled '0'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option src 'wan'
+	option dest_ip '192.168.88.88'
+	option name '电话WEB'
+	option src_dport '5065'
+	option dest_port '5065'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option src 'wan'
+	option dest_port '22'
+	option dest_ip '192.168.88.88'
+	option name '海NAS-SSH'
+	option src_dport '5067'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option name '电话数据'
+	option src 'wan'
+	option dest_ip '192.168.88.88'
+	option src_dport '5066'
+	option dest_port '5066'
 
 config include 'miniupnpd'
 	option type 'script'
@@ -220,27 +247,9 @@ config include 'mia'
 config redirect
 	option dest 'lan'
 	option target 'DNAT'
+	option name '46001数据'
 	option src 'wan'
+	option src_dport '42000'
 	option dest_ip '192.168.88.88'
-	option name '电话WEB'
-	option src_dport '5065'
-	option dest_port '5065'
-
-config redirect
-	option dest 'lan'
-	option target 'DNAT'
-	option src 'wan'
-	option dest_port '22'
-	option dest_ip '192.168.88.88'
-	option name '海NAS-SSH'
-	option src_dport '5067'
-
-config redirect
-	option dest 'lan'
-	option target 'DNAT'
-	option name '电话数据'
-	option src 'wan'
-	option dest_ip '192.168.88.88'
-	option src_dport '5066'
-	option dest_port '5066'
+	option dest_port '42000'
 
